@@ -1,11 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>redux-counter</title>
+    <script src="https://unpkg.com/redux@4.2.1/dist/redux.js"></script>
+</head>
+<body>
 <button id="decrement">-</button>
 <span id="count">0</span>
 <button id="increment">+</button>
-
-<script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+</body>
 
 <script>
-  // 1. 定义reducer函数 
+  // 1. 定义reducer函数
   // 作用: 根据不同的action对象，返回不同的新的state
   // state: 管理的数据初始状态
   // action: 对象 type 标记当前想要做什么样的修改
@@ -30,7 +37,7 @@
     document.getElementById('count').innerText = store.getState().count
   })
 
-  // 4. 通过store实例的dispatch函数提交action更改状态 
+  // 4. 通过store实例的dispatch函数提交action更改状态
   const inBtn = document.getElementById('increment')
   inBtn.addEventListener('click', () => {
     // 增
@@ -50,3 +57,4 @@
   // 5. 通过store实例的getState方法获取最新状态更新到视图中
 
 </script>
+</html>
