@@ -22,7 +22,10 @@ function App () {
         obj={{ name: 'jack' }}
         cb={() => console.log(123)}
         child={<span>this is span</span>}
-      />
+      >
+        {/* props.children */}
+        <span>This is son!</span>
+      </Son>
     </div>
   )
 }
